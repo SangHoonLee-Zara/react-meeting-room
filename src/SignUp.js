@@ -16,19 +16,7 @@ import { useStateValue } from './StateProvider';
 import {auth} from "./firebase"
 import Main from './Main';
 import SignIn from './SignIn';
-
-function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://hoeuisil.web.app/">
-          회의실예약관리
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
+import Copyright from './Copyright';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
