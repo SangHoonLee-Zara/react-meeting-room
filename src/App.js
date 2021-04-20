@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import SignIn from './SignIn';
 import Main from './Main';
+import Calendar from './Calendar';
 import { useStateValue } from './StateProvider';
 import {auth} from "./firebase";
 import { actionTypes } from './reducer';
@@ -19,7 +20,7 @@ function App() {
   //console.log(user);
   return (
     <div className="App">
-      {(!user)?(<SignIn/>):(<Main/>)}
+      {(!user)?(<SignIn/>):(<Calendar/>)}
     </div>
   );
 }

@@ -16,6 +16,7 @@ import { useStateValue } from './StateProvider';
 import {auth} from "./firebase"
 import Main from './Main';
 import SignIn from './SignIn';
+import Calendar from './Calendar';
 import Copyright from './Copyright';
 
 const useStyles = makeStyles((theme) => ({
@@ -154,6 +155,6 @@ export default function SignUp() {
         <Box mt={5}>
           <Copyright />
         </Box>
-        </Container>)):(<Main/>)
+        </Container>)):(<Calendar/>)
   )
 }

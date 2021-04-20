@@ -17,6 +17,7 @@ import {auth, provider} from "./firebase"
 import { actionTypes } from './reducer';
 import Main from './Main';
 import SignUp from './SignUp';
+import Calendar from './Calendar';
 import Copyright from './Copyright';
 
 const useStyles = makeStyles((theme) => ({
@@ -155,6 +156,6 @@ export default function SignIn() {
             <Copyright />
           </Box>
         </Container>)
-        ):(<Main/>)
+        ):(<Calendar/>)
   );
 }

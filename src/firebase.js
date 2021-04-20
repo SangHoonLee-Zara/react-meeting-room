@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import { firestore } from "firebase-admin";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAbap0S8u4fKizlcYfwXNcFILHhIyuiMGY",
@@ -32,4 +33,4 @@ auth.setPersistence(firebase.auth.Auth.Persistence.SESSION).then(() => {
   });
 
 export {auth, provider};
-export default db;
+export {db};
