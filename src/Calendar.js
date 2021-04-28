@@ -265,6 +265,8 @@ function Calendar() {
         break;
       }
     }
+    let flatpickrInstancesStart;
+    let flatpickrInstanceEnd;
     
     Swal.fire({
       title: startTime.format('yyyy-MM-DD')+" 일정 수정",
@@ -300,6 +302,17 @@ function Calendar() {
       showDenyButton: true,
       confirmButtonText: "수정",
       denyButtonText: "삭제",
+
+      willOpen: () => {
+        flatpickrInstancesStart = flatpickr(
+          Swal.getPopup().querySelector('#cal-start'),
+          flatpickerOption
+        );
+        flatpickrInstanceEnd = flatpickr(
+          Swal.getPopup().querySelector('#cal-end'),
+          flatpickerOption
+        )
+      },
       preConfirm: function () {
         if(checkFromToTime(startTime.format('yyyy-MM-DD ') + $('#cal-end').val())){
           Swal.fire(dupWarnMsg);
